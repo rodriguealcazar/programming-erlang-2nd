@@ -38,11 +38,6 @@ main(_) ->
 
     print(for(15, 25, fun(I) -> I end)).
 
-%% Control abstractions.
-for(Max, Max, F) -> [F(Max)];
-for(I, Max, F) -> [F(I) | for(I + 1, Max, F)].
-
-
 print(S) ->
     io:format("~p~n", [S]).
 
